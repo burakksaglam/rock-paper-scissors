@@ -33,6 +33,11 @@ function playRound(playerSelection, computerSelection) {
         return "You won! Rock beats Scissors";
     }
 
+    else if(playerSelection == computerSelection) {
+        console.log("It's a draw! Let's try again");
+        return playRound(playerSelection, computerSelection);
+    }
+
     else {
         console.log("Wrong command! Please try again.");
         return playRound(playerSelection, computerSelection);
